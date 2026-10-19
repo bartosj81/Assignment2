@@ -45,6 +45,13 @@ def cost_per_class(annual_cost, credits):
     return class_cost
 
 
+def worth_it(Door_Dash, Dining_Hall_Per_Month):
+    if Door_Dash < Dining_Hall_Per_Month:
+        return "Door Dash is not worth the money"
+    else:
+        return "Door Dash is not worth the money"
+
+
 # ---- PROGRAM ----
 
 def main():
@@ -62,6 +69,7 @@ def main():
         print("3. Cost per day")
         print("4. Cost per credit")
         print("5. Cost per class")
+        print("6. Is Door Dash worth it?")
         print("Q. Quit")
 
         choice = input("Choose an option: ")
@@ -79,7 +87,9 @@ def main():
             print("{:.2f}".format(cost_per_credit(annual_cost, credits)))
         elif choice == "5":
             print("{:.2f}".format(cost_per_class(annual_cost, credits)))
-
+        elif choice == "6":
+            Door_Dash = float(input("Enter the cost of Door Dash per month: $"))
+            print(worth_it(Door_Dash, DINING_HALL_PER_MONTH))
 
 # ---- LAUNCH: do not change ----
 if __name__ == "__main__":
